@@ -1,0 +1,195 @@
+<html>
+<head>
+  
+    <title>DEPORTES Y ACTIVIDADES - Club Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: ´Poppin, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+  text-align: center;
+        }
+        h1 {
+          
+            font-size: 3em;
+            color: #d4af37;
+      
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 15px;
+            cursor: pointer;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card h3 {
+            font-size: 1.2em;
+            margin: 10px 15px;
+            color: white;
+        }
+        .card p {
+            font-size: 0.95em;
+            margin: 0 15px 15px;
+            color: #ccc;
+            display: none;
+        }
+
+        #logo {
+            width: 110px; /* Ajusta el tamaño del logotipo */
+            height: auto;
+        }
+        .header {
+            background: black;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+            text-align: right;
+        }
+        .header img {
+            position: absolute;
+            left: 20px; /* Logotipo  en la parte superior izquierda */
+            top: 15px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0  5px; /* Reducido para que los botones estén más cerca */
+            padding: 8px 12px; /* Menor tamaño de padding */
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+            background: #000;
+        }
+        .header a:hover, .header a.active {
+            color: #000;
+            background-color: #d4af37;
+        }
+        .footer {
+            background: black;
+            padding: 15px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .footer a {
+            color: #d4af37;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 1,9em;
+        }
+    </style>
+    <script>
+        function toggleTexto(id) {
+            var texto = document.getElementById(id);
+            texto.style.display = texto.style.display === "block" ? "none" : "block";
+        }
+
+        // Cambiar el color al hacer clic en los enlaces de navegación
+        document.querySelectorAll('.header a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.header a').forEach(link => link.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="log.jpeg" alt="Logo del Club Elite" id="logo"> <!-- Tu logotipo -->
+        <a href="INICIO.HTML">INICIO</a>
+        <a href="ACERCA DE NOSOTROS.html">ACERCA DE NOSOTROS</a>
+        <a href="DEPORTES Y ACTIVIDADES.html">DEPORTES Y ACTIVIDADES</a>
+        <a href="CONTACTO.html">CONTACTO</a>
+    </div>
+
+    <div class="container">
+        <h1>DEPORTES Y ACTIVIDADES</h1>
+        <div class="grid">
+            <!-- Cards de actividades -->
+            <div class="card" onclick="toggleTexto('futbol')">
+                <img src="FUT.JPG" alt="Escuela de Fútbol">
+                <h3>Escuela de Fútbol</h3>
+                <p id="futbol">Mejora tus habilidades futbolísticas con entrenamientos profesionales para todas las edades.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('porristas')">
+                <img src="PORRISTA.JPEG" alt="Escuela de Porristas">
+                <h3>Escuela de Porristas</h3>
+                <p id="porristas">Desarrolla habilidades acrobáticas y coreográficas en un ambiente lleno de energía y motivación.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('tocho')">
+                <img src="tocho.JPG" alt="Tochito Bandera">
+                <h3>Tochito Bandera</h3>
+                <p id="tocho">Un deporte emocionante basado en el fútbol americano sin contacto, ideal para desarrollar agilidad, estrategia y trabajo en equipo.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('padel')">
+                <img src="PADEL.JPG" alt="Pádel">
+                <h3>Pádel</h3>
+                <p id="padel">Practica este emocionante deporte que combina técnica y diversión en nuestras modernas canchas.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('fitbox')">
+                <img src="FITBOX.JPG" alt="Fit Box">
+                <h3>Fit Box</h3>
+                <p id="fitbox">Un entrenamiento explosivo que combina boxeo y fitness para quemar calorías y liberar estrés.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('entrenamiento')">
+                <img src="ENTRENAMIENTO.JPG" alt="Entrenamiento Funcional">
+                <h3>Entrenamiento Funcional</h3>
+                <p id="entrenamiento">Fortalece tu cuerpo con ejercicios diseñados para mejorar tu rendimiento físico diario.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('baile')">
+                <img src="BAILE.JPG" alt="Baile Aeróbico">
+                <h3>Baile Aeróbico</h3>
+                <p id="baile">Disfruta de un entrenamiento divertido al ritmo de la música mientras mejoras tu resistencia cardiovascular.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('danza')">
+                <img src="danza.JPG" alt="Danza">
+                <h3>Danza</h3>
+                <p id="danza">Expresate a través de movimientos artísticos, el ritmo y la música para comunicar tus emociones, ideas y sentimientos.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('jazz')">
+                <img src="JAZZ.JPG" alt="Jazz">
+                <h3>Jazz</h3>
+                <p id="jazz">Aprende movimientos elegantes y expresivos en nuestras clases de jazz para todas las edades.</p>
+            </div>
+            <div class="card" onclick="toggleTexto('agility')">
+                <img src="AGILITY.JPG" alt="Agility">
+                <h3>Escuela para Perros (Agility)</h3>
+                <p id="agility">Entrena a tu perro con actividades de agilidad diseñadas para mejorar su condición física y su vínculo contigo.</p>
+            </div>
+        </div>
+    </div>
+<!-- PIE DE PÁGINA -->
+    <div class="footer">
+        <p>&copy; 2025 Club Elite. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>

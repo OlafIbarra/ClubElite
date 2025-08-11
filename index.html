@@ -1,1 +1,248 @@
-<h1>Hola bienvenido a Club Elite</h1> 
+<html>
+<head>
+
+    <title>Club Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+    <style>
+        /* Estilos Generales */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+         /* ENCABEZADO */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+       #logo {
+            width: 110px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            font-weight: 600;
+            border: 2px solid #d4af37;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #d4af37;
+            color: #000;
+        }
+
+        /* SECCIÓN HERO */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 40px;
+            gap: 60px;
+            text-align: left;
+        }
+
+        .video-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            font-weight: 800;
+            color: #d4af37;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(212, 175, 55, 0.6);
+        }
+
+        .hero-content p {
+            font-size: 1.4em;
+            font-weight: 400;
+            margin: 10px 0;
+        }
+
+        /* BOTÓN DESCUBRE NUESTROS DEPORTES */
+        .btn-deportes {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-decoration: none;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #000;
+            border-radius: 30px;
+            border: 2px solid #b8860b;
+            transition: 0.3s;
+            box-shadow: 0px 6px 12px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-deportes:hover {
+            background: linear-gradient(135deg, #b8860b, #d4af37);
+            box-shadow: 0px 8px 16px rgba(212, 175, 55, 0.6);
+        }
+
+        /* CHAT WHATSAPP */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .whatsapp-chat:hover {
+            background-color: #1ebe57;
+        }
+
+        /* SECCIÓN UBICACIÓN */
+        .location {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .location iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+            border-top: 2px solid #d4af37;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 3em;
+            }
+
+            .hero-content p {
+                font-size: 1.2em;
+            }
+
+            .video-container video {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header>
+    <img id="logo" src="log.JPEG" alt="Logo de Club Elite">
+    <nav>
+        <a href="INICIO.HTML">INICIO</a>
+        <a href="ACERCA DE NOSOTROS.html">ACERCA DE NOSOTROS</a>
+         <a href="DEPORTES Y ACTIVIDADES.html">DEPORTES Y ACTIVIDADES</a>
+        <a href="CONTACTO.html">CONTACTO</a>
+    </nav>
+</header>
+
+<!-- SECCIÓN HERO -->
+<section class="hero" id="inicio">
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="cd.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    </div>
+    <div class="hero-content">
+        <h1> ¡BIENVENIDOS! </h1>
+        <center><p><strong>Al lugar donde los sueños toman forma</strong></p></center>  
+        <center><a href="DEPORTES Y ACTIVIDADES.html" class="btn-deportes">Descubre Nuestros Deportes y Actividades</a></center>
+    <p>
+  <center><p>Únete a nuestra comunidad</p></center>
+        <center>
+        <p> Un espacio ideal para crear momentos inolvidables con tu familia, amigos o pareja, mientras cuidas tu salud física y emocional a través del deporte y la diversión.</p>
+        </center>
+        </p>
+    </div>
+</section>
+
+<!-- CHAT WHATSAPP-- >
+<a href="https://walink.co/2206f3" target="_blank" class="whatsapp-chat">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- SECCIÓN UBICACIÓN -->
+<div class="hero-content">
+<section class="location">
+    <h2>Nos encontramos en Ecatepec, Estado de México.</h2>
+<p> ¡Ven y vive la experiencia del Club Elite! </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.2695197720013!2d-99.04524932808013!3d19.615771934812116!2m3!1f0!2f0!3f0!3m2!1
+i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f13dc4d82fd1%3A0xa4da9ed52af0607e!2sElite%20Soccer%20Stadio!5e0!3m2!1ses!2smx!4v1738350443232!5m2!1ses!2smx"></iframe>
+</section>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+    <p>&copy; 2025 Club Elite. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
